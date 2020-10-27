@@ -1,0 +1,17 @@
+.DS_Store
+dist/electron/*
+dist/web/*
+build/*
+dist/*
+!build/icons
+node_modules/
+npm-debug.log
+npm-debug.log.*
+thumbs.db
+!.gitkeep
+configure.json
+vv.pem
+VirtViewer
+package-lock.json
+yarn-error.log
+build_temp
