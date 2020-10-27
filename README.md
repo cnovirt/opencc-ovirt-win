@@ -2,7 +2,7 @@
 
 ## 描述
 
-开源对接 ManageIQ 客户端, ManagerIQ 接管 Ovirt, Vmware 等虚拟化服务
+开源对接 oVirt 客户端
 
 ![](./.opencc_img/登录.jpg)
 
