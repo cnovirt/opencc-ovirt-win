@@ -74,14 +74,18 @@
     </div>
     <div class="footer">
       <div class="ahref">
-        <span @click="loginRegister">注册帐号</span>
-        <span>|</span>
+        <!-- 界面暂时屏蔽, 开发完成开放
+          <span @click="loginRegister">注册帐号</span>
+          <span>|</span>
+        -->
         <span @click="loginHelper">新手指引</span>
       </div>
+      <!-- 界面暂时屏蔽, 开发完成开放
       <div class="imgto">
         <img src="../images/login_face_user.png" @click="loginFaceUser" />
         <img src="../images/login_qrcode.png" @click="loginQRcode" />
       </div>
+       -->
     </div>
   </div>
 </template>
