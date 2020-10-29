@@ -2,19 +2,19 @@
   <div class="main">
     <div class="center-from">
       <el-form :inline="true" :model="formHostsData" class="demo-form-inline">
-        <span>IP : </span>
-        <el-input
-          :disabled="inputDisableIp"
-          class="form-ip-input"
-          v-model="formHostsData.ip"
-          placeholder="请输入"
-        ></el-input>
-
         <span>域名 : </span>
         <el-input
           :disabled="inputDisableDomain"
           class="form-domain-input"
           v-model="formHostsData.name"
+          placeholder="请输入"
+        ></el-input>
+
+        <span>IP : </span>
+        <el-input
+          :disabled="inputDisableIp"
+          class="form-ip-input"
+          v-model="formHostsData.ip"
           placeholder="请输入"
         ></el-input>
 
@@ -27,11 +27,7 @@
       <el-table width="350" height="190" :data="tableData">
         <el-table-column prop="index" label="序号" width="40"></el-table-column>
         <el-table-column prop="name" label="域名" width="140"></el-table-column>
-        <el-table-column
-          prop="ip"
-          label="IP/域名"
-          width="120"
-        ></el-table-column>
+        <el-table-column prop="ip" label="IP" width="120"></el-table-column>
         <el-table-column label="操作" width="50">
           <template slot-scope="scope">
             <!-- @click.native.prevent="deleteRow(scope.$index, tableData)" -->
