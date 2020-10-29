@@ -9,13 +9,41 @@
     <div class="main">
       <img src="../../images/set_box_win_bg.jpg" alt="" />
       <div class="content">
-        <p>OpenCC V1.1.0 (2020930)</p>
-        <p>由oVirt中文社区发布和维护，遵循MIT协议</p>
-        <p>http://www.cnovirt.com</p>
-        <p>MIT协议内容如下:(https://www.mit-license.org)</p>
-        <p>The MIT License(MIT)</p>
-        <p>Copyright &copy; 2020 &lt;copyright holders&gt;</p>
-        <p>xxx</p>
+        <p>OpenCC V1.1.0</p>
+        <p>
+          由oVirt中文社区发布和维护，遵循MIT协议
+          <br />
+          http://www.cnovirt.com
+          <br />
+          MIT协议内容如下:(https://www.mit-license.org)
+        </p>
+        <p>
+          The MIT License(MIT)
+          <br />
+          Copyright (c) 2020 oVirt中文社区
+        </p>
+        <p>
+          Permission is hereby granted, free of charge, to any person obtaining
+          a copy of this software and associated documentation files (the
+          "Software"), to deal in the Software without restriction, including
+          without limitation the rights to use, copy, modify, merge, publish,
+          distribute, sublicense, and/or sell copies of the Software, and to
+          permit persons to whom the Software is furnished to do so, subject to
+          the following conditions:
+        </p>
+        <p>
+          The above copyright notice and this permission notice shall be
+          included in all copies or substantial portions of the Software.
+        </p>
+        <p>
+          THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+          EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+          MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+          IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+          CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+          TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+          SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+        </p>
       </div>
     </div>
     <div class="footer">
@@ -39,7 +67,7 @@ export default {
     // 关闭当前窗口
     clickExitWin() {
       console.log('clickExitWin-about')
-      loginipc.send('set-exit-win', {'name':'about'})
+      loginipc.send('set-exit-win', { name: 'about' })
     },
     // 最小化
     zoomClient() {
@@ -79,15 +107,40 @@ div.menu-bar img.bar-left {
 
 /* 主体内容 */
 div.main {
-  height: 240px;
   width: 430px;
+  height: 240px;
 }
 div.main div.content {
-  margin-top: 10px;
-  margin-left: 10px;
+  width: 410px;
+  height: 170px;
+
+  margin: 10px;
   font-size: 13px;
-  line-height: 10px;
+  line-height: 12px;
   color: rgba(0, 0, 0, 0.6);
+
+  overflow: hidden;
+  overflow-y: auto;
+  background-color: transparent;
+}
+div.main div.content p {
+  width: 390px;
+  font-family: 'Microsoft YaHei UI', 'Courier New', Courier, monospace;
+}
+
+/* 主界面 -- 内容 : 滚动条 */
+div.content::-webkit-scrollbar {
+  background-color: #f5f5f5;
+  width: 10px;
+}
+div.content::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+div.content::-webkit-scrollbar-thumb {
+  /* height: 20px; */
+  border-radius: 10px;
+  background-color: rgba(150, 150, 150, 0.5);
 }
 
 /* 底部布局 */
