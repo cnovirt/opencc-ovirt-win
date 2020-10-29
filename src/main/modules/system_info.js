@@ -1,7 +1,8 @@
 const os = require('os')
 const util = require('util')
-import * as global_value from './global_value'
+const fs = require('fs')
 
+import * as global_value from './global_value'
 // import * as shellExec from './shell_exec'
 
 // 获取系统时间
@@ -108,25 +109,30 @@ const getNetWorkInfo = () => {
 // ip地址
 const getIPAddr = () => {
   let net = getNetWorkInfo()
-  if(net){
+  if (net) {
     return net.address
-  }else{
+  } else {
     return '127.0.0.1'
   }
 }
 // mac地址
 const getMacAddr = () => {
   let net = getNetWorkInfo()
-  if(net){
+  if (net) {
     return net.mac
-  }else{
+  } else {
     return '00.00.00.00.00.00'
   }
 }
 
 // 获取客户端版本号
 const getVersion = () => {
-  return 'v1.1.2'
+  if (fs.existsSync(global_value.GLOBEL_VERSION_PATH)) {
+    let version = fs.readFileSync(global_value.GLOBEL_VERSION_PATH)
+    return version.toString()
+  } else {
+    return '1.0.0'
+  }
 }
 
 // 向中心注册客户端的信息

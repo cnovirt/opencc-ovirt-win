@@ -9,7 +9,7 @@
     <div class="main">
       <img src="../../images/set_box_win_bg.jpg" alt="" />
       <div class="content">
-        <p>OpenCC V1.1.0</p>
+        <p>OpenCC V{{ version }}</p>
         <p>
           由oVirt中文社区发布和维护，遵循MIT协议
           <br />
@@ -55,12 +55,14 @@
 
 <script>
 const loginipc = require('electron').ipcRenderer // 定义信号与槽函数接收者
+import { getVersion } from '@/../main/modules/system_info'
 
 export default {
   name: 'login-page',
   data() {
     return {
       faceImg: require('@/images/login_qrcode_white.png'),
+      version: '0.0.0',
     }
   },
   methods: {
@@ -73,6 +75,10 @@ export default {
     zoomClient() {
       loginipc.send('zoom-client', true)
     },
+  },
+  mounted() {
+    // 读取文件本版号
+    this.version = getVersion()
   },
 }
 </script>
