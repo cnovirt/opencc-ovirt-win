@@ -4,7 +4,7 @@
       <div class="menu">
         <img src="../images/main_menu_close.png" @click="closeMain" />
         <img src="../images/main_menu_zoom.png" @click="zoomMain" />
-        <img src="../images/main_menu_notice.png" @click="noticeMain" />
+        <!-- <img src="../images/main_menu_notice.png" @click="noticeMain" /> -->
       </div>
       <div class="userinfo">
         <div class="userinfo-left">
