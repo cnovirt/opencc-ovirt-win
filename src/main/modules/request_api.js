@@ -23,7 +23,7 @@ export const request_api = (dict_args) => {
     }),
   }
 
-  axios.defaults.timeout = 10000
+  axios.defaults.timeout = 40000
 
   return axios.request(myAxiosConfig)
 }
