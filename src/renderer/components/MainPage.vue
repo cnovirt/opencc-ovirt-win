@@ -39,10 +39,10 @@
       <div class="seting-box" :class="{ 'seting-box-show': setBoxShow }">
         <ul>
           <li @click="setBoxHelp">帮助</li>
-          <li @click="setBoxUpdate">升级</li>
+          <!-- <li @click="setBoxUpdate">升级</li> -->
           <li @click="setBoxSeting">设置</li>
           <li @click="setBoxAbout">关于openCC</li>
-          <li @click="setBoxChangeUser">切换帐号</li>
+          <!-- <li @click="setBoxChangeUser">切换帐号</li> -->
           <li @click="setBoxOutUser" class="seting-out">
             <img src="../images/seting_out.png" />退出
           </li>
