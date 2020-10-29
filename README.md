@@ -1,8 +1,10 @@
-# 开源 OVIRT 客户端
+# opencc-ovirt-win oVirt开源桌面客户端windows版
 
 ## 描述
 
-开源对接 oVirt 客户端
+opencc-ovirt-win是一款能够直接连接oVirt虚拟化平台使用的桌面客户端软件，安装和运行在windows系统上，连接oVirt中的虚拟机。opencc-ovirt-win采用js开发，使用了流行的vue框架，集成了remote-viewer（一款开源的spice协议客户端）。
+
+## 截图
 
 ![](./.opencc_img/登录.jpg)
 
