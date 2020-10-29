@@ -136,20 +136,20 @@ export default {
       }
 
       // 检验 - IP地址
-      const reg_ip = /^(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$/
-      let retu_ip = reg_ip.test(this.formCenter.ip)
-      if (retu_ip) {
-        // this.$message.success('正确IP地址')
-      } else {
-        this.$message({
-          type: 'error',
-          message: '错误IP地址',
-          showClose: true,
-          center: true,
-        })
-        this.formCenter.ip = ''
-        return false
-      }
+      // const reg_ip = /^(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$/
+      // let retu_ip = reg_ip.test(this.formCenter.ip)
+      // if (retu_ip) {
+      //   // this.$message.success('正确IP地址')
+      // } else {
+      //   this.$message({
+      //     type: 'error',
+      //     message: '错误IP地址',
+      //     showClose: true,
+      //     center: true,
+      //   })
+      //   this.formCenter.ip = ''
+      //   return false
+      // }
 
       // 检验 - 端口号
       const reg_port = /^([0-9]|[1-9]\d|[1-9]\d{2}|[1-9]\d{3}|[1-5]\d{4}|6[0-4]\d{3}|65[0-4]\d{2}|655[0-2]\d|6553[0-5])$/
