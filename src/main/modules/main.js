@@ -99,9 +99,10 @@ export default () => {
       parent: global_value.mainWindow,
       modal: true,
       frame: false,
-      width: 430,
-      height: 330,
+      width: 432,
+      height: 332,
       show: true,
+      resizable:false, // 禁用修改窗口大小
     })
     child.loadURL(global.winURL + '#/set-about-page')
     child.on('closed', () => {
