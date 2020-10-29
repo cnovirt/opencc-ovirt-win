@@ -86,13 +86,13 @@ div.main div.content {
   margin-top: 10px;
   margin-left: 10px;
   font-size: 13px;
-  line-height: 20px;
+  line-height: 10px;
   color: rgba(0, 0, 0, 0.6);
 }
 
 /* 底部布局 */
 div.footer {
-  height: 40px;
+  height: 50px;
   color: white;
 }
 div.footer div.line {
