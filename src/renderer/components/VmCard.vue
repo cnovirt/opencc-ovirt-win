@@ -421,6 +421,9 @@ div.main-show div.main-hover span {
   margin-right: 12px;
   margin-top: 15px;
 }
+div.main-show div.main-hover span:nth-child(1) {
+  margin-right: 25px !important;
+}
 div.main-show div.main-hover span.vm-img-stop {
   margin-right: 5px;
   background-image: url('../images/vm_poweroff.png');
