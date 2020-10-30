@@ -1,9 +1,9 @@
 {
-  "name": "openCC",
-  "productName": "openCC",
+  "name": "opencc-ovirt",
+  "productName": "opencc-ovirt",
   "version": "0.0.1",
   "author": "wang_song <zero_ws@163.com>",
-  "description": "An electron-vue project",
+  "description": "opencc-ovirt是一款能够直接连接oVirt虚拟化平台使用的桌面客户端软件，安装和运行在windows系统上，连接oVirt中的虚拟机。opencc-ovirt采用js开发，使用了流行的vue框架，集成了remote-viewer(一款开源的spice协议客户端)",
   "license": null,
   "main": "./dist/electron/main.js",
   "scripts": {
