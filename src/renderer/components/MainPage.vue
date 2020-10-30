@@ -138,16 +138,8 @@ export default {
     // 设置列表框 -- 帮助
     setBoxHelp() {
       console.log('setBoxHelp')
-      // mainipc.send('set-box-help', true)
       this.setBoxShow = !this.setBoxShow
-
-      this.$message({
-        type: 'success',
-        message: '功能暂未开发',
-        center: true,
-        showClose: true,
-        duration: 2000,
-      })
+      mainipc.send('login-helper', true)
     },
     // 设置列表框 -- 升级
     setBoxUpdate() {
@@ -404,7 +396,7 @@ div.footer div.seting-box {
   color: gray;
   padding-left: 30px;
 }
-div.footer div.seting-box ul{
+div.footer div.seting-box ul {
   padding-left: 0;
 }
 div.footer div.seting-box ul li {

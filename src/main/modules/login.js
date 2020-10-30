@@ -6,6 +6,10 @@ import * as myconfig from './configure'
 
 import * as opencc_api from './opencc_api'
 
+const exec = require('child_process').exec
+
+const fs = require('fs')
+
 export default () => {
   // 初始化数据 -- 获取保存的用户数据
   ipcMain.on('login-init-data', (event, args) => {
@@ -80,6 +84,17 @@ export default () => {
   // 新手指引
   ipcMain.on('login-helper', (event, args) => {
     console.log('login-register', args)
+    let url = './src/renderer/images/help_pdf/opencc-ovirt帮助文档.pdf'
+    switch (process.platform) {
+      case 'darwin':
+        exec('open ' + url)
+        break
+      case 'win32':
+        exec('start ' + url)
+        break
+      default:
+        exec('xdg-open', url)
+    }
   })
 
   // 登录 -- 刷脸
