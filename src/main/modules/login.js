@@ -91,7 +91,14 @@ export default () => {
         exec('open ' + url)
         break
       case 'win32':
-        exec('start ' + url)
+        if (fs.existsSync(url)) {
+          exec('start ' + url)
+        } else {
+          // 这个地址是代码运行可以读取到的文件地址
+          url = './src/renderer/images/help_pdf/opencc-ovirt帮助文档.pdf'
+          exec('start ' + url)
+        }
+
         break
       default:
         exec('xdg-open', url)
