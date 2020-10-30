@@ -84,7 +84,8 @@ export default () => {
   // 新手指引
   ipcMain.on('login-helper', (event, args) => {
     console.log('login-register', args)
-    let url = './src/renderer/images/help_pdf/opencc-ovirt帮助文档.pdf'
+    // 这个地址是打包安装成功后,添加到安装目录中的文件地址
+    let url = './opencc-ovirt帮助文档.pdf'
     switch (process.platform) {
       case 'darwin':
         exec('open ' + url)
